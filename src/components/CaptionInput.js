@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 const CaptionInput = ({ onAddCaption }) => {
   const [text, setText] = useState("");
-  const [start, setStart] = useState("");
-  const [end, setEnd] = useState("");
+  const [start, setStart] = useState(null);
+  const [end, setEnd] = useState(null);
 
   const handleAddCaption = () => {
     if (text && start && end) {
@@ -38,7 +38,7 @@ const CaptionInput = ({ onAddCaption }) => {
       />
       <button 
         className="add-caption-button"
-        disabled={(text==="" || start==="" || end==="") || (start > end)} 
+        disabled={(text==="" || start===null || end===null) || (Number(start) > Number(end))} 
         onClick={handleAddCaption}>Add Caption</button>
     </div>
   );

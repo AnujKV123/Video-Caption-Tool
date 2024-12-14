@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const CaptionList = ({ captions, setCaptions }) => {
   const [editingId, setEditingId] = useState(null);
-  const [editingData, setEditingData] = useState({ start: "", end: "", text: "" });
+  const [editingData, setEditingData] = useState({ start: "", end: null, text: null });
 
   const handleEditCaption = (id) => {
     const updatedCaptions = captions.map((caption) =>
@@ -34,17 +34,17 @@ const CaptionList = ({ captions, setCaptions }) => {
             {editingId === caption.id ? (
               <>
                 <input
-                  type="text"
+                  type="number"
                   value={editingData.start}
                   onChange={(e) => handleEditingChange("start", e.target.value)}
-                  placeholder="Start Time"
+                  placeholder="Start Time (in seconds)"
                   className="caption-input"
                 />
                 <input
-                  type="text"
+                  type="number"
                   value={editingData.end}
                   onChange={(e) => handleEditingChange("end", e.target.value)}
-                  placeholder="End Time"
+                  placeholder="End Time (in seconds)"
                   className="caption-input"
                 />
                 <input
@@ -55,7 +55,7 @@ const CaptionList = ({ captions, setCaptions }) => {
                   className="caption-input caption-input-text"
                 />
                 <button
-                  disabled={(editingData.start==="" || editingData.end==="" || editingData.text==="")||(editingData.start>editingData.end)}
+                  disabled={(editingData.start==="" || editingData.end==="" || editingData.text==="")||( Number(editingData.start) > Number(editingData.end))}
                   onClick={() => handleEditCaption(caption.id)}
                   className="button button-save"
                 >
