@@ -1,0 +1,227 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light and dark theme variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --input-bg: #f0f0f0;
+  --input-border: #cccccc;
+  --button-bg: #007bff;
+  --button-bg-disabled: #444444;
+  --button-hover: #0056b3;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --input-bg: #1e1e1e;
+  --input-border: #444444;
+  --button-bg: #0056b3;
+  --button-bg-disabled: #444444;
+  --button-hover: #003f7f;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Video container */
+.video-container {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+video {
+  width: 100%;
+}
+
+
+/* Caption input section */
+.caption-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--input-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.caption-form input {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.caption-form button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.caption-form button:hover {
+  background-color: var(--button-hover);
+}
+
+.caption-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--button-bg-disabled);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.theme-toggle button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-bg);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Add more styles as needed */
+/* Video container styling */
+.video-container {
+  position: relative;
+}
+
+
+/* css captions list started  */
+
+.caption-list-container-main{
+  display: flex;
+  justify-content: center;
+}
+
+.caption-list-container {
+  width: 60%;
+}
+
+.caption-list-container h2 {
+  margin-bottom: 15px;
+}
+
+.caption-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.caption-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.caption-info {
+  flex-grow: 1;
+}
+
+.caption-input {
+  margin-right: 10px;
+  padding: 5px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-color);
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.caption-input-text {
+  flex-grow: 1;
+}
+
+.button {
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-save {
+  background-color: var(--button-bg);
+  margin-right: 10px;
+}
+.button-save:disabled {
+  background-color: var(--button-bg-disabled);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-save:hover {
+  background-color: var(--button-hover);
+}
+
+.button-cancel {
+  background-color: var(--button-bg-disabled);
+}
+
+.button-edit {
+  background-color: var(--button-bg);
+  margin-right: 10px;
+}
+
+.button-edit:hover {
+  background-color: var(--button-hover);
+}
+
+.button-delete {
+  background-color: var(--button-bg-disabled);
+}
+
+.button-delete:hover {
+  background-color: #d9534f; /* A red shade for delete hover */
+}
+
+
+
+
+
+
